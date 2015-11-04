@@ -50,6 +50,11 @@ body {
 }
 
 /* Post settings */
+.meta {
+  font-size: 90%;
+  color: #aaa;
+}
+
 #post {
   font-size: 105%;
 }
