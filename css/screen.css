@@ -148,3 +148,18 @@ ul.posts span {
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
+
+/* Tag settings */
+.tags_post{
+  font-size: 90%;
+}
+
+.tag_list{
+  font-size: 88%;
+  color: #666;
+}
+
+.intag_list{
+  font-size: 110%;
+  color: #666;
+}

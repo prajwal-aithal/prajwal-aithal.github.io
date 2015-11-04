@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Inside Indian Music
+tags:
+- music
 ---
 
 {{ page.title }}
