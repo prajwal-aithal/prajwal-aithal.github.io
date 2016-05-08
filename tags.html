@@ -12,13 +12,24 @@ title: Tags
     }
 </script>
 
-<h1>Tags</h1>
-<ul class="posts">  <li class="tag_list">
-    &nbsp &raquo; &nbsp <a name="music" href="#" onclick="toggle_visibility('music')">music</a>
-    <ul id="music" class="intag_list" style="display:none">
-            <li style="list-style-type: none;">
-              &nbsp &nbsp &nbsp &nbsp &curren; &nbsp <span style="color:#404040">04 Nov 2015</span> &nbsp &raquo; &nbsp <a href="/2015/11/04/article-on-music.html">Inside Indian Music</a>
-            </li>
-    </ul>
-  </li>
+<ul class="posts">
+    {% for curr_tag_tuple in site.tags %}
+        {% assign curr_tag = curr_tag_tuple | first %}
+        {% assign post_list = curr_tag_tuple | last %}
+        <li class="tag_list">
+            &nbsp &raquo; &nbsp <a name="{{ curr_tag }}" href="#" onclick="toggle_visibility('{{ curr_tag }}')">{{ curr_tag }}</a>
+            <ul id="{{ curr_tag }}" class="intag_list" style="display:none">
+
+        {% for post in post_list %}
+                <li style="list-style-type: none;">
+                    &nbsp &nbsp &nbsp &nbsp &curren; &nbsp <span style="color:#404040">
+                        {{ post.date | date: "%d %b %Y" }}
+                    </span>
+                    &nbsp &raquo; &nbsp <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+        {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
 </ul>
+
