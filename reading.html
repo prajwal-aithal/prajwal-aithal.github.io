@@ -7,7 +7,7 @@ title: Reading
 <ul class="posts">
   <div class="row">
     {% for book in site.data.reading['Books'] %}
-      <div class="col-md-3 col-lg-3 col-xs-3 col-sm-3">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 	<a href="{{ book.Link }}" target="_blank" title="{{ book.Title }}"><img src="{{ book.Cover }}" class="img-responsive" style="width:120px; height:170px"></a>
         {% assign progress_width = "100" %}
         {% assign progress_status = "Finished" %}
