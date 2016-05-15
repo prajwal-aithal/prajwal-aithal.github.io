@@ -13,23 +13,21 @@ title: Tags
 </script>
 
 <ul class="posts">
-    {% for curr_tag_tuple in site.tags %}
-        {% assign curr_tag = curr_tag_tuple | first %}
-        {% assign post_list = curr_tag_tuple | last %}
-        <li class="tag_list">
-            &nbsp &raquo; &nbsp <a name="{{ curr_tag }}" href="#" onclick="toggle_visibility('{{ curr_tag }}')">{{ curr_tag }}</a>
-            <ul id="{{ curr_tag }}" class="intag_list" style="display:none">
-
-        {% for post in post_list %}
-                <li style="list-style-type: none;">
-                    &nbsp &nbsp &nbsp &nbsp &curren; &nbsp <span style="color:#404040">
-                        {{ post.date | date: "%d %b %Y" }}
-                    </span>
-                    &nbsp &raquo; &nbsp <a href="{{ post.url }}">{{ post.title }}</a>
-                </li>
-        {% endfor %}
-            </ul>
-        </li>
-    {% endfor %}
+  {% for curr_tag_tuple in site.tags %}
+    {% assign curr_tag = curr_tag_tuple | first %}
+    {% assign post_list = curr_tag_tuple | last %}
+    <li class="tag_list">
+      &nbsp &raquo; &nbsp <a name="{{ curr_tag }}" href="#" onclick="toggle_visibility('{{ curr_tag }}')">{{ curr_tag }}</a>
+      <ul id="{{ curr_tag }}" class="intag_list" style="display:none"> 
+	{% for post in post_list %}
+	  <li style="list-style-type: none;">
+	    &nbsp &nbsp &nbsp &nbsp &curren; &nbsp <span style="color:#404040">
+	    {{ post.date | date: "%d %b %Y" }}
+	    </span>
+	    &nbsp &raquo; &nbsp <a href="{{ post.url }}">{{ post.title }}</a>
+	  </li>
+	{% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
 </ul>
-
