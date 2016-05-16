@@ -26,6 +26,12 @@
 		    Status: "Read"
 		},
 		{
+		    Title: "The Death of Ayrton Senna",
+		    Cover: "http://d.gr-assets.com/books/1335826592l/11191473.jpg",
+		    Link: "http://www.goodreads.com/book/show/11191473-the-death-of-ayrton-senna",
+		    Status: "Reading"
+		},
+		{
 		    Title: "How to Win Friends and Influence People",
 		    Cover: "http://d.gr-assets.com/books/1442726934l/4865.jpg",
 		    Link: "http://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People",
