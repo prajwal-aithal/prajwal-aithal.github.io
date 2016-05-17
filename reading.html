@@ -15,11 +15,11 @@ title: Reading
           {% assign progress_width = "50" %}
           {% assign progress_status = "Currently reading" %}
         {% endif %}
-        <div class="progress" style="border:0.03em solid black; margin-top:6px; height:10px">
-          <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress_width }}%">
-            <span aria-hidden="true" class="sr-only">{{ progress_status }}</span>
+        <span title="{{ progress_status }}">
+          <div class="progress" style="border:0.03em solid black; margin-top:6px; height:10px">
+            <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress_width }}%"></div>
           </div>
-        </div>
+        </span>
       </div>
     {% endfor %}
   </div>
