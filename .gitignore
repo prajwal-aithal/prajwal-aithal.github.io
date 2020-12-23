@@ -1,2 +1,7 @@
-_site/
-_posts/*-ltests-posts.md
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+Gemfile
+Gemfile.lock
